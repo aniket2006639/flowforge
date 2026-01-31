@@ -2,8 +2,10 @@ import base64
 import requests
 
 email = "31240571@vupune.ac.in"          # ✅ your email
-api_token = "ATATT3xFfGF0N_-a25xRlPGc3x4bAeRBpAQTObEWNcJAeYNMa-yVro37NJB3bIJ5Jfa4eW5WjYY2syq3erxyxoInli6uVRSwPBS3teSiYPQz9IZyfuxHNRaXMkrtphpZxTM1uhiBbSCtEOdX1__-fhHMxodioCVBG2D-clHjFtw2PRyyR8qTfp4=F52E018F"      # ❗ paste the token you generated
-domain = "yuktix.atlassian.net"
+import os
+
+API_TOKEN = os.getenv("JIRA_API_TOKEN")
+
 
 ACCOUNT_ID = "712020:d86cc211-7bde-44ee-be70-913dd91b3dd3"
 
