@@ -1,0 +1,76 @@
+.prd-editor-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.prd-editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.prd-editor-textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: none;
+  flex: 1;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.prd-editor-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.prd-editor-textarea:focus {
+  outline: none;
+  border-color: #0065ff;
+  background: rgba(15, 15, 15, 0.95);
+  box-shadow: 0 0 0 3px rgba(0, 101, 255, 0.1);
+}
+
+.prd-editor-textarea:disabled {
+  background-color: rgba(30, 30, 30, 0.5);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.generate-tasks-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #0065ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 101, 255, 0.3);
+}
+
+.generate-tasks-btn:hover:not(:disabled) {
+  background-color: #0052cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 101, 255, 0.4);
+}
+
+.generate-tasks-btn:disabled {
+  background-color: rgba(100, 100, 100, 0.3);
+  cursor: not-allowed;
+  box-shadow: none;
+}

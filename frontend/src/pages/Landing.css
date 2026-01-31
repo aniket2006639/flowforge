@@ -1,0 +1,206 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.background-layer > * {
+  pointer-events: auto;
+}
+
+.background-layer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+.foreground-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.landing-logo {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.logo-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ccc;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+}
+
+.login-jira-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #0065ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.login-jira-btn:hover {
+  background-color: #0052cc;
+}
+
+/* CONTENT */
+.landing-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.landing-tagline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: -80px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  max-width: 800px;
+}
+
+.landing-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 700; 
+  color: #ddd;
+  letter-spacing: 0.4px;
+}
+
+.landing-flow .arrow {
+  color: #aaa;
+}
+
+/* ACTION */
+.landing-action {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+  margin-bottom: 4rem;
+}
+
+.get-started-btn {
+  padding: 1rem 3rem;
+  background-color: #0065ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.get-started-btn:hover {
+  background-color: #0052cc;
+  transform: translateY(-2px);
+}
+
+.get-started-btn:active {
+  transform: translateY(0);
+}
+
+/* FOOTER */
+.landing-footer {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-btn {
+  background: none;
+  border: none;
+  color: #9bbcff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.contact-btn:hover {
+  text-decoration: underline;
+}
+
+.contact-email {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo-title {
+    font-size: 1.9rem;
+  }
+
+  .landing-tagline {
+    font-size: 2.4rem;
+    margin-top: -40px;
+  }
+
+  .landing-flow {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .landing-action {
+    margin-top: -20px;
+  }
+
+  .landing-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
