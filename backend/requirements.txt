@@ -9,3 +9,4 @@ pydantic
 python-dotenv
 requests
 httpx
+email-validator
