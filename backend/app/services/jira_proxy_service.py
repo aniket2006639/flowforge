@@ -31,7 +31,8 @@ def fetch_issues(db: Session, user_id: str, project: str):
     conn = _get_connection(db, user_id)
     token = decrypt_secret(conn.encrypted_token)
 
-    url = f"{conn.site_url}/rest/api/3/search/jql"
+    url = f"{conn.site_url}/rest/api/3/search"
+
 
     params = {
         "jql": f'project = "{project}"',
