@@ -30,11 +30,14 @@ app = FastAPI(
 # Lock this to Netlify domain later
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://theflowforge.netlify.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ----------------------------
 # DATABASE (MVP MODE)
