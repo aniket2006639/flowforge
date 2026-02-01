@@ -16,9 +16,11 @@ async function apiRequest(endpoint, options = {}) {
   
   try {
     const response = await fetch(url, {
-      ...options,
-      headers,
-    });
+  ...options,
+  headers,
+  credentials: 'include',
+});
+
 
     if (response.status === 401) {
       localStorage.removeItem('token');
